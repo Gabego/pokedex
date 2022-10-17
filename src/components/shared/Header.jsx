@@ -1,10 +1,10 @@
 import React from 'react'
-import './styles/heater.css'
+import './styles/header.css'
 
 
-const Footer = () => {
+const Header = () => {
   return (
-    <heater className='heater'>
+    <header className='heater'>
         
         <div className="heater__red">
             <div className="heater__black"></div>
@@ -13,9 +13,8 @@ const Footer = () => {
             </div>
         </div>
         <img className='pokedex__img2' src="/images/home/pokedex.png" alt="" />
-        
-    </heater>
+    </header>
   )
 }
 
-export default Footer
+export default Header

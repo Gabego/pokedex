@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import CardPoke from '../components/pokedex/CardPoke'
 import InputSearch from '../components/pokedex/InputSearch'
 import SelectByType from '../components/pokedex/SelectByType'
-import Heater from '../components/shared/Heater'
+import Header from '../components/shared/Header'
 import './styles/pokedex.css'
 
 
@@ -23,14 +23,11 @@ const pokedex = () => {
                 })
                 .catch(err => console.log(err))
         } else {
-            const URL = 'https://pokeapi.co/api/v2/pokemon?limit=50&offset=0'
+            const URL = 'https://pokeapi.co/api/v2/pokemon?limit=12&offset=23'
             axios.get(URL)
                 .then(res => setPokemons(res.data.results))
                 .catch(err => console.log(err))
-
         }
-
-
     }, [typeSelected])
 
 
@@ -38,18 +35,18 @@ const pokedex = () => {
 
     return (
         <div className='pokedex__container'>
-            <Heater />
-            <heade className='pokedex__header-card'>
+            <Header />
+            <header className='pokedex__header-card'>
                 <div className="space"></div>
                   <p className='pokedex__welcome'><span className='pokedex__welcome-red'>Welcome {userName}</span>, here you can find your favorite pokemon.</p>
-            </heade>
-            <aside class='pokedex__aside'>
+            </header>
+            <aside className='pokedex__aside'>
                 <InputSearch />
             
                 <SelectByType setTypeSelected={setTypeSelected} />
             </aside>
 
-            <main class='pokedex__main'>
+            <main className='pokedex__main'>
                 <div className='card-container'>
                     {
                         pokemons?.map(pokemon => (
