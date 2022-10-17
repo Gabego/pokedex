@@ -1,6 +1,6 @@
 select {
   position: relative;
-  top: 120px;
+  top: 80px;
     display: block;
     width: 220px;
     box-shadow: 2px 2px 4px rgb(112, 113, 119);
@@ -10,7 +10,7 @@ select {
         position: relative;
         display: block;
         height: 30px;
-        margin-top: 20px;
+        margin-top: -20px;
         width: 278px;
         box-shadow: 2px 2px 4px rgb(112, 113, 119);
     }
