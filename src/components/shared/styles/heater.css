@@ -1,8 +1,11 @@
-.pokedex__img {
+.pokedex__img2 {
+    position: absolute;
     width: 400px;
     z-index: 2;
-    
+    overflow: hidden;
+    left: 20px;
 }
+
 .heater__red {
     background-color: var(--color-red);
     width: 100%;
@@ -10,32 +13,92 @@
     position: absolute;
     top: 0;
     left: 0;
-    }
-    .heater__black {
+    z-index: 0;
+}
+
+.heater__black {
     background-color: #222;
     width: 100%;
     height: 40px;
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 0;
+}
+
+.heater__circle {
+    width: 80px;
+    aspect-ratio: 1;
+    position: absolute;
+    background-color: #222;
+    border-radius: 50%;
+    top: 40px;
+    left: 90%;
+    transform: translate(-50%);
+}
+
+.heater__circle-in {
+    width: 60px;
+    aspect-ratio: 1;
+    position: absolute;
+    background-color: #222;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, 9px);
+    border: 10px solid white;
+}
+
+@media (max-width: 600px) {
+    .pokedex__img2 {
+        position: absolute;
+        width: 250px;
+        z-index: 2;
+        overflow: hidden;
+        top: 10px;
+        left: 20px;
     }
+
+    .heater__red {
+        background-color: var(--color-red);
+        width: 100%;
+        height: 65px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    .heater__black {
+        background-color: #222;
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+    }
+
     .heater__circle {
-        width: 80px;
+        width: 40px;
         aspect-ratio: 1;
         position: absolute;
         background-color: #222;
         border-radius: 50%;
-        bottom: 0;
-        left: 50%;
+        top: 35px;
+        left: 90%;
         transform: translate(-50%);
     }
+
     .heater__circle-in {
-        width: 60px;
+        width: 28px;
         aspect-ratio: 1;
         position: absolute;
         background-color: #222;
         border-radius: 50%;
+        top: -3px;
         left: 50%;
         transform: translate(-50%, 9px);
-        border: 10px solid white;
+        border: 5px solid white;
+
     }
+}

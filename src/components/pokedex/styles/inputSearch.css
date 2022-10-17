@@ -1,0 +1,44 @@
+.form__input {
+    position: relative;
+   top: 120px; 
+    font-size: 24px;
+}
+input {
+    height: 32px;
+    padding: 5px 8px;
+    box-shadow: 2px 2px 4px rgb(112, 113, 119);
+}
+button {
+    height: 32px;
+    padding: 5px 25px;
+    color: white;
+    background-color: #d93f3f;
+    box-shadow: 2px 2px 4px rgb(112, 113, 119);
+}
+button:hover {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+@media (max-width: 600px){
+    .form__input {
+        font-size: 18px;
+    }
+    input {
+        height: 32px;
+           padding: 8px 8px;
+        box-shadow: 2px 2px 4px rgb(112, 113, 119);
+    }
+    button {
+        height: 32px;
+  
+        padding: 8px 25px;
+        color: white;
+        background-color: #d93f3f;
+        box-shadow: 2px 2px 4px rgb(112, 113, 119);
+    }
+    button:hover {
+        cursor: pointer;
+        font-weight: 700;
+    }
+}

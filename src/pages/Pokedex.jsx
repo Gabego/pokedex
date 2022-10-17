@@ -23,7 +23,7 @@ const pokedex = () => {
                 })
                 .catch(err => console.log(err))
         } else {
-            const URL = 'https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0'
+            const URL = 'https://pokeapi.co/api/v2/pokemon?limit=50&offset=0'
             axios.get(URL)
                 .then(res => setPokemons(res.data.results))
                 .catch(err => console.log(err))
@@ -37,17 +37,19 @@ const pokedex = () => {
     const userName = useSelector(state => state.userName)
 
     return (
-        <div>
-            <header>
+        <div className='pokedex__container'>
             <Heater />
-                <p>Welcome <span>{userName}</span>, here you can find your favorite pokemon.</p>
-            </header>
-            <aside>
+            <heade className='pokedex__header-card'>
+                <div className="space"></div>
+                  <p className='pokedex__welcome'><span className='pokedex__welcome-red'>Welcome {userName}</span>, here you can find your favorite pokemon.</p>
+            </heade>
+            <aside class='pokedex__aside'>
                 <InputSearch />
+            
                 <SelectByType setTypeSelected={setTypeSelected} />
             </aside>
 
-            <main>
+            <main class='pokedex__main'>
                 <div className='card-container'>
                     {
                         pokemons?.map(pokemon => (

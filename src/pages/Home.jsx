@@ -1,6 +1,7 @@
 import React from 'react'
 import FormHome from '../components/home/FormHome'
 import './styles/home.css'
+import Footer from '../components/shared/Footer'
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
      </header>
      
       <FormHome />
-
+      <Footer />
     </article>
   )
 }
