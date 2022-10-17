@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux'
 import CardPoke from '../components/pokedex/CardPoke'
 import InputSearch from '../components/pokedex/InputSearch'
 import SelectByType from '../components/pokedex/SelectByType'
+import Heater from '../components/shared/Heater'
+import './styles/pokedex.css'
 
 
 const pokedex = () => {
@@ -21,7 +23,7 @@ const pokedex = () => {
                 })
                 .catch(err => console.log(err))
         } else {
-            const URL = 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=0'
+            const URL = 'https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0'
             axios.get(URL)
                 .then(res => setPokemons(res.data.results))
                 .catch(err => console.log(err))
@@ -37,7 +39,7 @@ const pokedex = () => {
     return (
         <div>
             <header>
-                <h1>pokedex</h1>
+            <Heater />
                 <p>Welcome <span>{userName}</span>, here you can find your favorite pokemon.</p>
             </header>
             <aside>
