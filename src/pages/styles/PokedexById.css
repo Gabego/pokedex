@@ -18,7 +18,7 @@
 }
 
 .pokedexById__img  {
-        width: 30%;
+        width: 25%;
         position: absolute;
         top: 75px;
         left: 50%;
@@ -34,6 +34,44 @@
     width: 100%;
     height: 200px;
     background-color: green;
+}
+.pokedexById__hw-container {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+.pokedexById__label1 {
+    font-size: 12px;
+    font-weight: 600;
+}
+.pokedexById__label2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.pokedexById__ta-container {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+.pokedexById__ta-label {
+    font-size: 12px;
+    font-weight: 600;
+}
+.pokedexById__type-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+.pokedexById__ability-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
 }
 .pokedexById__movements-container {
     position: relative;
