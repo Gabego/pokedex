@@ -93,7 +93,7 @@ align-items: center;
 .border-fairy {border-color: #971B45;}
 .border-psychic {border-color: #650c95;}
 .border-ice {border-color: #6FBEDF;}
-
+.border-flying {border-color: #117098;}
 
 
 /*-- BACKGROUND COLORS --*/
@@ -115,6 +115,7 @@ align-items: center;
 .bg-electric {background: linear-gradient(179.75deg, #0C1395 -19.96%, #2B319B 43.67%, #7075D9 138.4%);}
 .bg-psychic {background: linear-gradient(179.75deg, #650c95 -19.96%, #9b2b92 43.67%, #902a6e 138.4%);}
 .bg-ice {background: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%);}
+.bg-flying {background: linear-gradient(177.03deg, #117098 -11.97%, #176b8c 47.77%, #02425d 136.72%);}
 
 
 
@@ -138,3 +139,4 @@ align-items: center;
 .letter-fairy {color: #971B45;}
 .letter-psychic {color: #650c95;}
 .letter-ice {color: #6FBEDF;}
+.letter-flying {color: #117098;}

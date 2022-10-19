@@ -59,7 +59,7 @@ const PokedexById = () => {
             <ul className='pokedexById__type-container'>
               {
                 pokemon?.types.map(type => (
-                  <li key={type.slot} className='pokedexById__type-type'>{type.type.name}</li>
+                  <li key={type.slot} className={`pokedexById__type-type bg-${type.type.name}`}>{type.type.name}</li>
                 ))
               }
             </ul>
@@ -77,34 +77,30 @@ const PokedexById = () => {
         </div>
         <div>
           <div>
-            <p className='pokedexById__stats-label'>Stats</p>
-            <ul className='pokedexById__stats-container'>
+            <h3 className='pokedexById__stats-title'>Stats</h3>
+            <div className='pokedexById__stats-container'>
               {
-                pokemon?.stats.map(stat => (
-                  <li key={stat.name} className='pokedexById__stat-name'>{stat.stat.name}</li>
-                ))
-              }
-              {
-                pokemon?.stats.map(base_stat => (
-                  <li key={base_stat.slot} className='pokedexById__stat-value'>{base_stat.base_stat}</li>
-                ))
-              }
-            </ul>
+                pokemon?.stats.map((stat) => (
+                  <div>
+                    <div className='pokedexById__stats-data-contanier' key={stat.stat.URL}>
+                      <a className='pokedexById__stats-name'> {stat.stat.name}:</a>
+                      <a className='pokedexById__stats-value'> {stat.base_stat} /150</a>
+                      {/*const porcentage = marth.floor(${stat.base_stat} /150)*/}
+                      
+                    </div>  
+                  <div className='pokedexById__stats-line-container'>
+                     <div className='pokedexById__stats-line1'style={{ width: `${stat.base_stat/1.5}%` }} ></div>
+                   <div className='pokedexById__stats-line2'style={{width: `${100-stat.base_stat/1.5}%`}} ></div>
+                  </div>
+                  
+                  </div>
 
-          </div>
-          </div>
-    {/*}      <div className='Stats'>
-        <h2>Stats Base</h2>
-        {
-          pokemon.stats?.map((stat) => (
-            
-             <div key={stat.stat.URL}>
-              <b>{stat.stat.name}: </b> <div className='Stats1'><div style={{width:`${stateColor(stat.base_stat)}%`}} className='Stats2'> {stat.base_stat} /150</div></div>
+                ))}
             </div>
-            
-          ))
-        }
-      </div>*/}
+           
+            <div style={{height:"20px"}}></div>
+          </div>
+        </div>
       </section>
 
       <section>
